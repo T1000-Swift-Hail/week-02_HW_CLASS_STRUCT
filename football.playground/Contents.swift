@@ -30,10 +30,16 @@ let ToniKroos:Player = Player(name: "Toni Kroos" , height: 1.83 , location: "Ger
 let GarethBale:Player = Player(name: "Gareth Bale" , height: 1.85 , location: "Wales", skillLevel: "high" , shirtNumber: 18 , position: "Forward")
 
 let ThibautCourtois:Player
-= Player(name: "Thibaut Courtois" , height: 2.00 , location: "Belgium", skillLevel: "low" , shirtNumber: 1 , position: "Goalkeeper")
+= Player(name: "Thibaut Courtois" , height: 2.00 , location: " Belgium", skillLevel: "low" , shirtNumber: 1 , position: "Goalkeeper")
+
+let Neymar:Player
+= Player(name: "Neymar" , height: 1.75 , location: "Brazil", skillLevel: "high" , shirtNumber: 10 , position: "Forward")
+
+let RobertLewandowski:Player
+= Player(name: "Robert Lewandowski" , height: 1.84 , location: "Belgium", skillLevel: "very high" , shirtNumber: 9 , position: "Forward")
  
 var myteam: footBall = footBall()
 myteam.name = "myteam"
-myteam.Players = [KarimBenzema,ToniKroos, GarethBale ,ThibautCourtois]
+myteam.Players = [KarimBenzema,ToniKroos, GarethBale , ThibautCourtois , Neymar , RobertLewandowski]
 myteam.PrintDescription()
  
