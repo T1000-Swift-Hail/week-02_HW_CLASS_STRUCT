@@ -21,7 +21,7 @@
 
 ## Now you want to model Real Madrid team using the Team class and add some players. Follow those steps:
 -  Create 4 different players who play in Real Madrid FC
--  Create realMadrid using the class Team and initialize it using the 4 players you created in the last step
+-  Create the team realMadrid using the class Team and initialize it using the 4 players you created in the last step
 -  Call the function realMadrid.describeTeam()
 
 ## Bonus
