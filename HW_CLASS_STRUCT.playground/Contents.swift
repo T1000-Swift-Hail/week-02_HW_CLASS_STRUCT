@@ -9,32 +9,37 @@ struct Player {
     var shirtNumber : Int
     var position : String
     
-    func describePlayer( name: String, height: Double, skillLevel: String,placeOfBirth:String, position: String, shirtNumber: Int){
+    func describePlayer(){
      print("\n Player name is \(name) , he is \(height) meters ُall. He is from \(placeOfBirth), His skill level is \(skillLevel) and playes in position \(position) wing . His T-Shirt number is \(shirtNumber).")
     }
 }
 
 class Team {
-    var name : String = ""
-    var players : [Player] = []
+    let name : String
+    let players : [Player]
+    
+    
+    init( _ name : String, _ players:[Player]){
+        self.name = name
+        self.players = players
+    }
     
     func describeTeam() {
+        print("\(name) Team:")
         for player in players {
-            player.describePlayer(name: player.name, height:player.height,skillLevel: player.skillLevel, placeOfBirth: player.placeOfBirth , position: player.position, shirtNumber: player.shirtNumber)
+            player.describePlayer()
+            
        }
     }
 }
+
 
 let rMadridPlayer1 = Player (name: "Andriy Lunin", height: 189, placeOfBirth:"Ukraine" , skillLevel: "Moderate", shirtNumber: 13, position: "Goalkeeper")
 let rMadridPlayer2 = Player (name: "Daniel Carvajal Ramos", height: 173, placeOfBirth:"Madrid" , skillLevel: "Very high", shirtNumber: 2, position: "Defender")
 let rMadridPlayer3 = Player (name: "Toni Kroos", height: 183, placeOfBirth:"Germany" , skillLevel: "Very high", shirtNumber: 8, position: "Midfielder")
 let rMadridPlayer4 = Player (name: "Mariano Díaz Mejía", height: 180, placeOfBirth:"Barcelona" , skillLevel: "Very high", shirtNumber: 24, position: "Forward")
 
-let realMadridTeam = Team()
-realMadridTeam.name = "Real Madrid"
-print("\(realMadridTeam.name) Team:")
-
-realMadridTeam.players.append(contentsOf:[rMadridPlayer1,rMadridPlayer2,rMadridPlayer3,rMadridPlayer4])
+let realMadridTeam = Team("Real Madrid", [rMadridPlayer1,rMadridPlayer2,rMadridPlayer3,rMadridPlayer4])
 realMadridTeam.describeTeam()
 
 let alhilalPlayer1 = Player (name: "Salman Alfaraj", height: 177, placeOfBirth:"Saudi Arabia" , skillLevel: "Very high", shirtNumber: 7, position: "Defender")
@@ -42,11 +47,7 @@ let alhilalPlayer2 = Player (name: "Habib Alwota'yan", height: 180, placeOfBirth
 
 print("")
 
-let alHilalTeam = Team()
-alHilalTeam.name = "AlHilal"
-print("\(alHilalTeam.name) Team:")
-
-    alHilalTeam.players.append(contentsOf: [alhilalPlayer1 , alhilalPlayer2])
+let alHilalTeam = Team( "AlHilal", [alhilalPlayer1 , alhilalPlayer2])
 alHilalTeam.describeTeam()
 
 
