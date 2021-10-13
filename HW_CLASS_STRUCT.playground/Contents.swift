@@ -8,7 +8,7 @@ struct Player {
     var shirtNumber:Int
     var position:String
 
-    func describePlayer(name:String,height:Double,locaatio:String,skillLevel:String,shirtNumber:Int,position:String){
+    func  describeplayer(){
     print (" rea1Madrid team in \(location).The player name is \(name),he is \(height)meters tall, His skill level is very\(skillLevel)and playes in position\(position).His T-Shirt number is \(shirtNumber).")
         
     }
@@ -19,7 +19,7 @@ class Team{
     
     func describeTeam(){
         for theplayers in players{
-            theplayers.describeplayer(name:String,height:Double,location:String,skillLevel:String,shirtNumber:Int,position:String)
+            theplayers.describeplayer()
         }
 
     }
